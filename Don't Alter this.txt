@@ -1,0 +1,103 @@
+Does it have feathers?
+Is it wise?
+Does it fly high?
+Eagle
+#
+#
+Is it black?
+Crow
+#
+#
+Owl
+#
+#
+Does it have colourful feathers?
+Parrot
+#
+#
+Is it larger than dove?
+Pigeon
+#
+#
+Does it make a harsh sound?
+Crow
+#
+#
+Nightingale
+#
+#
+Is it a mammal?
+Does it have stripes?
+Does it have only 3 stripes on its back?
+Squirrel
+#
+#
+Tiger
+#
+#
+Does it hop?
+Kangaroo
+#
+#
+Is it wild?
+Is it has huge body and large horns?
+Bison
+#
+#
+Is it is largest mammal?
+Whale
+#
+#
+Is it have spots on its body?
+Cheetah
+#
+#
+Is it cunning?
+Fox
+#
+#
+Lion
+#
+#
+Does it have a large trunk?
+Elephant
+#
+#
+Is it human close friend and pet animal?
+Do you ride on its back?
+Horse
+#
+#
+Is it a cold blooded animal?
+Platypus
+#
+#
+Dog
+#
+#
+Is it eats banana and climbs tree?
+Monkey
+#
+#
+Bear
+#
+#
+Does it have a tail?
+Does it hiss?
+Snake
+#
+#
+Is it extinct?
+Dinosaur
+#
+#
+Lizard
+#
+#
+Does it live in both water and land?
+Crocodile
+#
+#
+Shark
+#
+#
