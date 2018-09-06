@@ -12,7 +12,7 @@ struct Node
     struct Node* left;
     struct Node* right;
 };
-Node *newnode, *root , *start;
+Node *newnode, *root , *start, *prev;
 
 void question(Node* root, Node* prev);
 void Deserialize(Node*& root, fstream& file);
@@ -20,6 +20,7 @@ void updatetree(Node* fin, Node*& prefin);
 void finalquestion(Node* root, Node* prev);
 void dot(int n);
 void gameReady();
+void replay();
 
 void gameReady()
 {
@@ -114,31 +115,18 @@ void updatetree(Node* fin, Node*& prefin)
     }
     cout<<"Updated successfully"<<endl;
     system("color 0A");
+    replay();
 }
 
-void delay(int n)
+void replay()
 {
-    for(int i=0;i<=n;i++);
-}
-
-void finalquestion(Node* root, Node* prev)
-{
-    string reply;
-    //system("color 4F");8
-    cout<<"Is your animal '"<<root->ans<<"' ?"<<"\t";
-    system("color 4F");
-    cin>>reply;
-    if(reply=="yes" || reply=="YES" || reply=="Yes" || reply=="y" || reply=="Y")
-    {
-        //system("CLS");
-        system("color AF");
-        cout<<"\n\n\t\t\t\tYAAAAAAAAAAAAAAAAAAAH!!! I found out, Huraaaaay"<<endl;
-        cout<<"\t\t\t\t\t      Thanks for playing"<<endl<<"\n\nDo you want to play again?";
+        string reply;
+        cout<<"\n\nDo you want to play again?";
         cin>>reply;
         if(reply=="yes" || reply=="YES" || reply=="Yes" || reply=="y" || reply=="Y")
         {
             cout<<"Rebooting the system";
-            dot(5);
+            dot(3);
             system("CLS");
             question(start,prev);
         }
@@ -154,6 +142,27 @@ void finalquestion(Node* root, Node* prev)
                     cout<<endl;
             }
         }
+        else
+        {
+            cout<<"Sorry, please enter a valid answer Yes or No"<<endl;
+            replay();
+        }
+}
+
+void finalquestion(Node* root, Node* prev)
+{
+    string reply;
+    //system("color 4F");
+    cout<<"Is your animal '"<<root->ans<<"' ?"<<"\t";
+    system("color 4F");
+    cin>>reply;
+    if(reply=="yes" || reply=="YES" || reply=="Yes" || reply=="y" || reply=="Y")
+    {
+        //system("CLS");
+        system("color AF");
+        cout<<"\n\n\t\t\t\tYAAAAAAAAAAAAAAAAAAAH!!! I found out, Huraaaaay"<<endl;
+        cout<<"\t\t\t\t\t      Thanks for playing"<<endl;
+        replay();
     }
     else if(reply=="no" || reply=="NO" || reply=="No" || reply=="n" || reply=="N")
         updatetree(root, prev);
@@ -210,7 +219,7 @@ int main()
     //cout<<"Deserialize ends"<<endl;
     gameReady();
     cout<<"Initiating the GAME";
-    dot(5);
+    dot(3);
     system("CLS");
     question(start,NULL);
     //preorder(start);
