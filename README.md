@@ -21,7 +21,7 @@ This is a C++ AI game, which will guess your animal that you thought in your min
 - Windows 10
 - Code::Blocks
 
-- **This project is still in construction, if you have any idea to implement to this one, you are welcome. We will surely give credits for that. THANK YOU**
+**This project is still in construction, if you have any idea to implement to this one, you are welcome. We will surely give credits for that. THANK YOU**
 
 - [x] Initial prototype, Sept 5, 2018
 - [ ] Final prototype
