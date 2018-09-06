@@ -12,7 +12,7 @@ struct Node
     struct Node* left;
     struct Node* right;
 };
-Node *newnode, *root , *start;
+Node *newnode, *root , *start, *prev;
 
 void question(Node* root, Node* prev);
 void Deserialize(Node*& root, fstream& file);
@@ -118,19 +118,15 @@ void updatetree(Node* fin, Node*& prefin)
     replay();
 }
 
-void delay(int n)
-{
-    for(int i=0;i<=n;i++);
-}
-
 void replay()
 {
+        string reply;
         cout<<"\n\nDo you want to play again?";
         cin>>reply;
         if(reply=="yes" || reply=="YES" || reply=="Yes" || reply=="y" || reply=="Y")
         {
             cout<<"Rebooting the system";
-            dot(5);
+            dot(3);
             system("CLS");
             question(start,prev);
         }
@@ -146,7 +142,13 @@ void replay()
                     cout<<endl;
             }
         }
+        else
+        {
+            cout<<"Sorry, please enter a valid answer Yes or No"<<endl;
+            replay();
+        }
 }
+
 void finalquestion(Node* root, Node* prev)
 {
     string reply;
@@ -217,7 +219,7 @@ int main()
     //cout<<"Deserialize ends"<<endl;
     gameReady();
     cout<<"Initiating the GAME";
-    dot(5);
+    dot(3);
     system("CLS");
     question(start,NULL);
     //preorder(start);
