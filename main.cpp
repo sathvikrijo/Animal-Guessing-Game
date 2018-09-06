@@ -20,6 +20,7 @@ void updatetree(Node* fin, Node*& prefin);
 void finalquestion(Node* root, Node* prev);
 void dot(int n);
 void gameReady();
+void replay();
 
 void gameReady()
 {
@@ -114,6 +115,7 @@ void updatetree(Node* fin, Node*& prefin)
     }
     cout<<"Updated successfully"<<endl;
     system("color 0A");
+    replay();
 }
 
 void delay(int n)
@@ -121,19 +123,9 @@ void delay(int n)
     for(int i=0;i<=n;i++);
 }
 
-void finalquestion(Node* root, Node* prev)
+void replay()
 {
-    string reply;
-    //system("color 4F");8
-    cout<<"Is your animal '"<<root->ans<<"' ?"<<"\t";
-    system("color 4F");
-    cin>>reply;
-    if(reply=="yes" || reply=="YES" || reply=="Yes" || reply=="y" || reply=="Y")
-    {
-        //system("CLS");
-        system("color AF");
-        cout<<"\n\n\t\t\t\tYAAAAAAAAAAAAAAAAAAAH!!! I found out, Huraaaaay"<<endl;
-        cout<<"\t\t\t\t\t      Thanks for playing"<<endl<<"\n\nDo you want to play again?";
+        cout<<"\n\nDo you want to play again?";
         cin>>reply;
         if(reply=="yes" || reply=="YES" || reply=="Yes" || reply=="y" || reply=="Y")
         {
@@ -154,6 +146,21 @@ void finalquestion(Node* root, Node* prev)
                     cout<<endl;
             }
         }
+}
+void finalquestion(Node* root, Node* prev)
+{
+    string reply;
+    //system("color 4F");
+    cout<<"Is your animal '"<<root->ans<<"' ?"<<"\t";
+    system("color 4F");
+    cin>>reply;
+    if(reply=="yes" || reply=="YES" || reply=="Yes" || reply=="y" || reply=="Y")
+    {
+        //system("CLS");
+        system("color AF");
+        cout<<"\n\n\t\t\t\tYAAAAAAAAAAAAAAAAAAAH!!! I found out, Huraaaaay"<<endl;
+        cout<<"\t\t\t\t\t      Thanks for playing"<<endl;
+        replay();
     }
     else if(reply=="no" || reply=="NO" || reply=="No" || reply=="n" || reply=="N")
         updatetree(root, prev);
