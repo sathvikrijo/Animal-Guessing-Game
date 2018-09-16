@@ -1,29 +1,57 @@
+Is it extinct?
+Is it a nomadic bird that could reach speed of 60mph?
+Passenger pigeon
+#
+#
+Was it precisely known as giant deer?
+Irish Flk
+#
+#
+Was it a closest relative of elephant and had shortest tail to minimize frost bite?
+Woody Mammoth
+#
+#
+Was it an animal that had stripes only on yhe front half of body?
+Quagga
+#
+#
+Is it popular in Hollywood movies?
+Dinosaur
+#
+#
+Tasmanian tiger
+#
+#
 Does it have feathers?
-Is it wise?
-Does it fly high?
-Eagle
-#
-#
-Is it black?
-Crow
-#
-#
-Owl
-#
-#
 Does it have colourful feathers?
-Is your bird a National representative?
-Peacock
+parrot
 #
 #
-Parrot
+Is it larger than a dove?
+pigeon
 #
 #
-Is it larger than dove?
-Pigeon
+Does it have motted plumage that serve as carmouflage?
+sparrow
 #
 #
-Does it make a harsh sound?
+Is it wise?
+owl
+#
+#
+Is it a sign of goodluck to sailors?
+Albatross
+#
+#
+Is it a majestic bird which is a favourite subject in asian paintings?
+Crane
+#
+#
+Do they tap on tree trunks to find insects?
+Wood Pecker
+#
+#
+Does it have harsh sound?
 Crow
 #
 #
@@ -31,78 +59,50 @@ Nightingale
 #
 #
 Is it a mammal?
-Does it have stripes?
-Does it have only 3 stripes on its back?
-Squirrel
-#
-#
+Can it be identified by unique pattern of stripes?
 Tiger
+#
+#
+Does it have unique pattern of black and white stripes?
+Zebra
+#
+#
+Can its nose be ridged with unique pattern?
+Cat
+#
+#
+Does it curl into ball when asleep?
+Dog
+#
+#
+Does it have trunk?
+Elephant
 #
 #
 Does it hop?
 Kangaroo
 #
 #
-Is it wild?
-Is it has huge body and large horns?
-Bison
+Is it largest tree dwindling mammal?
+Orguntan
 #
 #
-Is it is largest mammal?
-Whale
+Does it have horns?
+Rhinoceros
 #
 #
-Is it have spots on its body?
-Cheetah
-#
-#
-Is it cunning?
-Fox
-#
-#
-Lion
-#
-#
-Does it have a large trunk?
-Elephant
-#
-#
-Is it human close friend and pet animal?
-Do you ride on its back?
-Horse
-#
-#
-Is it a cold blooded animal?
-Platypus
-#
-#
-Dog
-#
-#
-Is it eats banana and climbs tree?
-Monkey
+Is it the largest mammal in the world?
+Blue Whale
 #
 #
 Bear
 #
 #
-Does it have a tail?
-Does it hiss?
-Snake
+Doe it have large tail and eat insects?
+lizard
 #
 #
-Is it extinct?
-Dinosaur
-#
-#
-Is it big?
-Iguana
-#
-#
-Lizard
-#
-#
-Does it live in both water and land?
+Does it live in land and water?
 Crocodile
 #
 #
