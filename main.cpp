@@ -3,6 +3,7 @@
 #include <string.h>
 #include <conio.h>
 #include <windows.h>
+#include <sys/stat.h>
 
 using namespace std;
 struct Node
@@ -215,17 +216,27 @@ void dot(int n)
 int main()
 {
     fstream file;
+    struct stat buffer;
     system("color 0A");
-    file.open("Data.txt",ios::in);
-    Deserialize(start,file);
-    file.close();
-    gameReady();
-    cout<<"Initiating the GAME";
-    dot(2);
-    system("CLS");
-    question(start,NULL);
-    file.open("Data.txt",ios::out);
-    Serialize(start,file);
-    file.close();
+    int present = stat("Data.txt",&buffer);
+    if(present == 0)
+    {
+        file.open("Data.txt",ios::in);
+        Deserialize(start,file);
+        file.close();
+        gameReady();
+        cout<<"Initiating the GAME";
+        dot(3);
+        system("CLS");
+        question(start,NULL);
+        file.open("Data.txt",ios::out);
+        Serialize(start,file);
+        file.close();
+    }
+    else
+    {
+        system("color 4F");
+        cout<<"FILE NOT FOUND, Please ensure the file \"Data.txt\" is present in the current directory"<<endl;
+    }
     return 0;
 }
