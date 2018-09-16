@@ -5,14 +5,13 @@
 #include <windows.h>
 
 using namespace std;
-
 struct Node
 {
     string ans;
     struct Node* left;
     struct Node* right;
 };
-Node *newnode, *root , *start, *prev;
+Node *newnode, *root , *start;
 
 void question(Node* root, Node* prev);
 void Deserialize(Node*& root, fstream& file);
@@ -20,7 +19,6 @@ void updatetree(Node* fin, Node*& prefin);
 void finalquestion(Node* root, Node* prev);
 void dot(int n);
 void gameReady();
-void replay();
 
 void gameReady()
 {
@@ -39,7 +37,6 @@ void Serialize (Node*& root, fstream& file)
     else
     {
         file<<root->ans<<endl;
-        //cout<<root->ans<<endl;
         Serialize(root->left,file);
         Serialize(root->right,file);
     }
@@ -55,7 +52,6 @@ void Deserialize (Node*& root,fstream& file)
             }
             else
                 return;
-            //cout<<str<<endl;
             if(str!="#")
             {
                 root = new Node;
@@ -85,14 +81,12 @@ void updatetree(Node* fin, Node*& prefin)
 {
     string ans,qn;
     system("color DF");
-    //cout<<prefin->ans<<endl<<fin->ans<<endl;
     cout<<"\n\n\t\t\t\t\t****I ACCEPT MY DEFEAT****"<<endl;
     cout<<"What's your animal?"<<"\t";
-    cin>>ans;
-    cout<<"Now, type a characteristic question for your animal which return your animal "<<ans<<" for yes, and return "<<fin->ans<<" for no"<<endl;
     cin.ignore();
+    getline(cin,ans);
+    cout<<"Now, type a characteristic question for your animal which return your animal "<<ans<<" for yes, and return "<<fin->ans<<" for no"<<endl;
     getline(cin,qn);
-
     Node *ansnode, *qnnode;
     ansnode = new Node;
     ansnode->ans = ans;
@@ -113,20 +107,52 @@ void updatetree(Node* fin, Node*& prefin)
     {
         prefin->right = qnnode;
     }
-    cout<<"Updated successfully"<<endl;
     system("color 0A");
-    replay();
+    fstream file;
+    file.open("Data.txt",ios::out);
+    Serialize(start,file);
+    cout<<"Updated successfully"<<endl<<endl<<endl;
+    string reply;
+    cout<<"Do you want to play again?";
+    cin>>reply;
+        if(reply=="yes" || reply=="YES" || reply=="Yes" || reply=="y" || reply=="Y")
+        {
+            cout<<"Rebooting the system";
+            dot(2);
+            system("CLS");
+            question(start,NULL);
+        }
+        else if(reply=="no" || reply=="NO" || reply=="No" || reply=="n" || reply=="N")
+        {
+            system("color 09");
+            cout<<"Thanks for playing with me, i think we had a good time. See you soon. Bye bye"<<endl;
+            for(int i=0;i<20;i++)
+            {
+                if(i==10)
+                    cout<<"\t\t\t\t\tBUILT BY St.Joseph's Cseians"<<endl<<"\t\t\t\t\t\t#Viola\n\t\t\t\t\t\t#Hemashree\n\t\t\t\t\t\t#Lakshmi\n\t\t\t\t\t\t#Yogeswaran\n\t\t\t\t\t\t#Sanjay Prashadh\n\t\t\t\t\t\t#Sathvik\n"<<endl;
+                else
+                    cout<<endl;
+            }
+        }
+    system("pause");
 }
 
-void replay()
+void finalquestion(Node* root, Node* prev)
 {
-        string reply;
-        cout<<"\n\nDo you want to play again?";
+    string reply;
+    cout<<"Is your animal '"<<root->ans<<"' ?"<<"\t";
+    system("color 4F");
+    cin>>reply;
+    if(reply=="yes" || reply=="YES" || reply=="Yes" || reply=="y" || reply=="Y")
+    {
+        system("color AF");
+        cout<<"\n\n\t\t\t\tYAAAAAAAAAAAAAAAAAAAH!!! I found out, Huraaaaay"<<endl;
+        cout<<"\t\t\t\t\t      Thanks for playing"<<endl<<"\n\nDo you want to play again?";
         cin>>reply;
         if(reply=="yes" || reply=="YES" || reply=="Yes" || reply=="y" || reply=="Y")
         {
             cout<<"Rebooting the system";
-            dot(3);
+            dot(2);
             system("CLS");
             question(start,prev);
         }
@@ -142,27 +168,6 @@ void replay()
                     cout<<endl;
             }
         }
-        else
-        {
-            cout<<"Sorry, please enter a valid answer Yes or No"<<endl;
-            replay();
-        }
-}
-
-void finalquestion(Node* root, Node* prev)
-{
-    string reply;
-    //system("color 4F");
-    cout<<"Is your animal '"<<root->ans<<"' ?"<<"\t";
-    system("color 4F");
-    cin>>reply;
-    if(reply=="yes" || reply=="YES" || reply=="Yes" || reply=="y" || reply=="Y")
-    {
-        //system("CLS");
-        system("color AF");
-        cout<<"\n\n\t\t\t\tYAAAAAAAAAAAAAAAAAAAH!!! I found out, Huraaaaay"<<endl;
-        cout<<"\t\t\t\t\t      Thanks for playing"<<endl;
-        replay();
     }
     else if(reply=="no" || reply=="NO" || reply=="No" || reply=="n" || reply=="N")
         updatetree(root, prev);
@@ -209,23 +214,18 @@ void dot(int n)
 
 int main()
 {
-    //char value,str[100];
-    //int i=0;
     fstream file;
     system("color 0A");
     file.open("Data.txt",ios::in);
     Deserialize(start,file);
     file.close();
-    //cout<<"Deserialize ends"<<endl;
     gameReady();
     cout<<"Initiating the GAME";
-    dot(3);
+    dot(2);
     system("CLS");
     question(start,NULL);
-    //preorder(start);
     file.open("Data.txt",ios::out);
     Serialize(start,file);
-    //cout<<"Serialize ends"<<endl;
     file.close();
     return 0;
 }
