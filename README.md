@@ -21,7 +21,7 @@ This is a simple C++ game based on Expert Systems, which will try to guess your 
 - Windows 10
 - Code::Blocks
 
-**This project is still in construction, if you have any idea to implement onto this one or take this one to next level, YOU ARE WELCOME (or) you find some errors or bugs in the code, feel free to share, we will make changes to the file and give credits to you for that. THANKS IN ADVANCE**
+**This project is still in construction, if you have any idea to implement onto this one or take this one to next level, YOU ARE WELCOME (or)if you found some errors or bugs in the code, feel free to share, we will make changes to the file and give credits to you for that. THANKS IN ADVANCE**
 
 - [x] Initial prototype, Sept 5, 2018
 - [ ] Final prototype
